@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-between align-items-center">
+  <h1>{{'sale.title' | translate}}</h1>
+
+  <div>
+    <button (click)="openUpdate()" nz-button nzSize="large" nzType="primary">{{'entity.action.add' | translate}}</button>
+  </div>
+</div>
+
+<div class="mt-3">
+  <div class="table-responsive" *ngIf="data?.length else noData;">
+    <nz-table [nzData]="data" nzOuterBordered nzShowPagination="false" nzSize="small">
+      <thead>
+      <tr>
+        <th>{{'sale.product' | translate}}</th>
+        <th>{{'sale.amount' | translate}}</th>
+        <th>{{'sale.price' | translate}}</th>
+        <th>{{'sale.month' | translate}}</th>
+        <th>{{'sale.year' | translate}}</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{item.product?.productName}}</td>
+        <td>{{item.amount}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.moth}}</td>
+        <td>{{item.year}}</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <button (nzOnConfirm)="delete(item)"
+                    [nzCancelText]="'entity.action.cancel' | translate"
+                    [nzOkText]="'entity.action.yes' | translate"
+                    class="btn"
+                    nz-button
+                    nz-popconfirm=""
+                    nzPopconfirmPlacement="top"
+                    [nzPopconfirmTitle]="'sale.delete' | translate">
+              <span nz-icon nzTheme="outline" nzType="delete"></span>
+            </button>
+            <button (click)="openUpdate(item)" class="btn" nz-button>
+              <span nz-icon nzTheme="outline" nzType="edit"></span>
+            </button>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>
+
+<ng-template #noData>
+  <nz-empty
+    nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+    [nzNotFoundFooter]="footerTpl"
+  >
+    <ng-template #footerTpl>
+      <button nz-button nzType="primary" (click)="openUpdate()">{{'entity.action.createNow' | translate}}</button>
+    </ng-template>
+  </nz-empty>
+</ng-template>

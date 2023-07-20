@@ -1,0 +1,36 @@
+{
+  "entity": {
+    "menu": {
+      "product": "Product",
+      "sale": "Sale",
+      "dashboard": "Dashboard",
+      "menus": "Menus"
+    },
+    "action": {
+      "add": "Add",
+      "createNow": "Create Now",
+      "save": "Save",
+      "cancel": "Cancel",
+      "yes": "Yes"
+    }
+  },
+  "product": {
+    "updateModal": "Product create and update",
+    "title": "List of product",
+    "name": "Product name",
+    "brand": "Brand",
+    "price": "Price",
+    "status": "Status",
+    "delete": "Delete product"
+  },
+  "sale": {
+    "updateModal": "Sale create and update",
+    "title": "List of sale",
+    "product": "Product",
+    "amount": "Amount",
+    "price": "Price",
+    "month": "Moth",
+    "year": "Year",
+    "delete": "Delete Sale"
+  }
+}

@@ -1,0 +1,37 @@
+.status {
+  color: #fff;
+  background-color: #1890ff;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 6px 10px;
+  &.NEW {
+    background-color: #17a2b8;
+  }
+
+  &.ERROR {
+    background-color: #d9363e;
+  }
+
+  &.EXPIRED {
+    background-color: #ffc107;
+  }
+
+  &.INACTIVE {
+    background-color: #ADB8BE;
+  }
+
+  &.ACTIVE {
+    background-color: #3AC358;
+  }
+
+  &.DELETED {
+    background-color: #ffb4b4;
+  }
+}
+
+.ant-modal-footer {
+  display: flex;
+  justify-content: right;
+  padding: 10px 0 0;
+}

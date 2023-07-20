@@ -1,0 +1,31 @@
+<h2>{{'product.updateModal' | translate}}</h2>
+<form [formGroup]="updateForm">
+  <div nz-row nzGutter="16">
+    <div nz-col nzSpan="12" class="mb-3 form-control">
+      <label for="brand">{{'product.brand' | translate}}</label>
+      <input nz-input id="brand" class="base-input" formControlName="brand" placeholder="Iphone">
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3 form-control">
+      <label for="productName">{{'product.name' | translate}}</label>
+      <input nz-input id="productName" class="base-input" formControlName="productName" placeholder="Iphone 14">
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3 form-control">
+      <label for="brand">{{'product.price' | translate}}</label>
+      <input nz-input id="price" class="base-input" formControlName="price" placeholder="1400">
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3">
+      <label for="status">{{'product.status' | translate}}</label>
+      <nz-select id="status" class="base-input w-100" formControlName="status" nzPlaceHolder="Select">
+        <nz-option *ngFor="let status of statuses" [nzValue]="status" [nzLabel]="status"></nz-option>
+      </nz-select>
+    </div>
+
+  </div>
+</form>
+
+<div class="ant-modal-footer mt-2">
+  <button nz-button nzType="primary" nzSize="large" (click)="submit()">{{'entity.action.save' | translate}}</button>
+</div>

@@ -1,0 +1,38 @@
+<h2>{{'sale.updateModal' | translate}}</h2>
+<form [formGroup]="updateForm">
+  <div nz-row nzGutter="16">
+    <div nz-col nzSpan="12" class="mb-3 form-control">
+      <label for="product">{{'sale.product' | translate}}</label>
+      <nz-select (ngModelChange)="selectProduct($event)" id="product" class="base-input w-100" formControlName="product" nzPlaceHolder="Select">
+        <nz-option *ngFor="let product of products" [nzValue]="product" [nzLabel]="product.productName"></nz-option>
+      </nz-select>
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3 form-control">
+      <label for="amount">{{'sale.amount' | translate}}</label>
+      <input (input)="amountValue($event)" nz-input id="amount" class="base-input" formControlName="amount" placeholder="10">
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3 form-control">
+      <label for="price">{{'sale.price' | translate}}</label>
+      <input [disabled]="true" nz-input id="price" class="base-input" [(ngModel)]="price"  [ngModelOptions]="{standalone: true}" placeholder="1400">
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3">
+      <label for="moth">{{'sale.month' | translate}}</label>
+      <nz-select id="moth" class="base-input w-100" formControlName="moth" nzPlaceHolder="Select">
+        <nz-option *ngFor="let item of moth" [nzValue]="item" [nzLabel]="item"></nz-option>
+      </nz-select>
+    </div>
+
+    <div nz-col nzSpan="12" class="mb-3">
+      <label for="year">{{'sale.year' | translate}}</label>
+      <input nz-input id="year" class="base-input" formControlName="year" placeholder="2023">
+    </div>
+
+  </div>
+</form>
+
+<div class="ant-modal-footer mt-2">
+  <button nz-button nzType="primary" nzSize="large" (click)="submit()">{{'entity.action.save' | translate}}</button>
+</div>

@@ -1,0 +1,36 @@
+{
+  "entity": {
+    "menu": {
+      "product": "Mahsulot",
+      "sale": "Sotish",
+      "dashboard": "Boshqaruv paneli",
+      "menus": "Menyular"
+    },
+    "action": {
+      "add": "Qo'shish",
+      "createNow": "Hozir yaratish",
+      "save": "Saqlash",
+      "cancel": "Bekor qilish",
+      "yes": "Ha"
+    }
+  },
+  "product": {
+    "updateModal": "Mahsulot yaratish va yangilash",
+    "title": "Mahsulot ro'yxati",
+    "name": "Mahsulot nomi",
+    "brand": "Brend",
+    "price": "Narxi",
+    "status": "Holat",
+    "delete": "Mahsulotni o'chirish"
+  },
+  "sale": {
+    "updateModal": "Sotish yaratish va yangilash",
+    "title": "Sotish ro'yxati",
+    "product": "Mahsulot",
+    "amount": "Miqdori",
+    "price": "Narxi",
+    "month": "Kuya",
+    "year": "Yil",
+    "delete": "Sotishni o'chirish"
+  }
+}
